@@ -1,6 +1,5 @@
 # Representación del Conocimiento ( Curso 19-20 )
-Universidad de Huelva
-Curso 2019-2020
+Universidad de Huelva (curso 2019-2020)
 
 ## Practica 0
     Este programa implementa en Prolog el predicado natural que comprueba si un número es natural o no.
