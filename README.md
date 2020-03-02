@@ -10,5 +10,5 @@ Universidad de Huelva (curso 2019-2020)
     natural(-1).
         false
 
-    natural(5)
+    natural(5).
         true
