@@ -1,0 +1,57 @@
+---------- 24/02/20 ------------
+
+	- Los comentarios se escriben con %
+	- Las variables empiezan en mayusculas
+	- Las reglas se explican al revés, es decir, si a implica b debemos poner que b implica a.
+	- Para decir lo que contiene es :-, es decir, <- en prolog es :-
+	- El operador para asignar es is
+	- Si todo lo que hay a la derecha es cierto, lo de la izquierda tmb.
+	- Para leer un fichero File -> consult
+	- Clausulas son reglas o hechos
+
+	- + delante de un argumento significa que para que ese predicado funcione, ese argumento debe tener un valor.
+	- - delante de un argumento significa que para que ese predicado funcione, el argumento no debe tener valor, es decir, debe estar vacia.
+	- ? delante de un argumento puede tener valor o no.
+
+---------- 04/03/20 ------------
+
+	- Principio de inducción matemático.
+		Queremos probar que P es cierta para todo elemento de S, donde S debe ser 
+			ordenable y debe de existir un primer elemento n0.
+		1.- P debe ser cierta para el primer elemento P(n0)
+		2.- Si fuera cierto P(n-1) tambíen es cierta para P(n), siendo n > n0
+
+	-Logica Proposicional ( no tienen variables, es más complicado )
+
+	a -> b = es una regla
+	a = antecedente
+	b = consecuente
+
+	natural(1) -> hechos
+
+	- Clausulas de Horn = una regla de la forma que tiene uno o varios terminos unidos por el & en el antecedente y en el consecuente sólo puede tener un término.
+
+	a & b & c -> d => En Prolog sería d:- a, b, c.
+
+	Transformación a clausulas de Horn:
+	a -> b & c  =>	a -> b
+		 	a -> c
+
+	a || b -> c  => 	a -> c
+			b -> c
+
+	a -> b || c => no se puede expresar, porque expresa una indeterminación.
+
+	- No hay que inicializar las variables como Python.
+
+	- Operador identidad ==, para comparar si son iguales.
+
+	-Unificación , símbolo de unificación en Prolog es =, es decir, vemos a = b, a unifica con b. Dos términos unifican si :
+		1.- Si no hay variables, unifican si son idénticos. ( consideramos idénticos si cuando vamos leyendo caracter a caracter en las dos partes, y son el mismo caracter, exceptuando 1+1 = +(1,1) que es identico ya que Prolog internamente 1+1 lo transforma a +(1,1) y los parentesis, si no alteran la estructura de lo que iba dentro también)
+		2.- Si tienen variables, unifican si es posible encontrar una sustitución de las variables de forma que llegen a ser idénticos.
+
+	- Declarar lista en Prolog -> [1,2,3]
+	
+	- Operador 'is', evalua lo que tiene a la derecha y lo unifica con la izquierda.
+
+	- Operador =:=, evalua a la izquierda y a la derecha y unifica los resultados.

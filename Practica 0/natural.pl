@@ -1,6 +1,6 @@
 %-------------------------------------------
 % natural(+Numero)
-% es ciertto si Numero es un numero natural
+% es cierto si Numero es un numero natural
 %-------------------------------------------
 
 /* Comentarios :
@@ -12,6 +12,7 @@
 
     % a /\ b /\ c /\ -> d
     d :- a, b, c.
+    
 */
 
 natural(1).
