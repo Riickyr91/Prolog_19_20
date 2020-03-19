@@ -1,0 +1,8 @@
+1.- Si, siempre y cuando los elementos a obtener son al principio o al final de la lista. (Imagen en ConcatenaLista/Ejercicio1.jpg)
+
+2.- Es posible hacer un uso reversible del predicado invertir, ya que no utilizamos el operador is o =:= (Imagen en InvierteLista/Ejercicio2.jpg)
+
+3.- En teoria cualquier predicado tendría que ser reversible, pero hay un elemento que fastidia la reversibilidad, el operador is, que realiza operaciones aritméticas, porque obliga que haya valores a la derecha para que se pueda realizar.
+is o =:=.
+
+4.- Ejemplos expuestos en las imagenes anteriores.
