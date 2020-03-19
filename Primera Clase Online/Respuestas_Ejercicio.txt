@@ -1,4 +1,4 @@
-1.- Si, siempre y cuando los elementos a obtener son al principio o al final de la lista. (Imagen en ConcatenaLista/Ejercicio1.jpg)
+1.- Si. (Imagen en ConcatenaLista/Ejercicio1.jpg)
 
 2.- Es posible hacer un uso reversible del predicado invertir, ya que no utilizamos el operador is o =:= (Imagen en InvierteLista/Ejercicio2.jpg)
 
