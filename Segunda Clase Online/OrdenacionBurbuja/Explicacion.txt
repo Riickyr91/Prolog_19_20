@@ -1,0 +1,12 @@
+En este caso, la inducción no será referente al tamaño, sino a la ordenación de la lista, es decir, que parará cuando todos los elementos de la lista estén ordenados de menor a mayor.
+
+Para hacer el burbuja, los casos base son lista ordenada y nos encontramos una par no ordenado.
+
+Pero primero debemos crear una función que sea para la comprobación de una lista esté ordenado.
+En está función, los casos bases son lista vacía y lista con un elemento, ya que al ir quitando elementos de la lista llegamos al momento de que sólo hay uno.
+
+Tener en cuenta que las restricciones deben estar al principio del algoritmo por tema de eficiencia.
+
+\+ en la negación !, ejemplo
+
+	\+ ordenada -> si NO está ordenada
