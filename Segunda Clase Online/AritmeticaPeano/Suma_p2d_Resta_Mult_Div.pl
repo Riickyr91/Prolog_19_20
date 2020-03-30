@@ -55,3 +55,39 @@ resta( N1, s(N2), R) :- resta( N1, N2, s(R)).
 % Ponemos _, porque cualuier cosa multiplicada por 0 es 0
 mult( _, 0, 0).
 mult(N1, s(N2), R2) :- mult(N1 , N2, R), suma(N1, R, R2).
+
+%-------------------------------------------
+%
+% Peano Div
+% peano_div( ?N1, ?N2, ?R, ?Resto). 
+% 
+% es cierto si R unifica con el numero de 
+% veces que puede restarse N2 a N1.
+% Resto unificará con el resto de la division entera.
+%
+% peano_div( s(s(s(0))), (s(s(0))), R, Resto ).
+% R = s(0) 
+% Resto = s(0)
+%-------------------------------------------
+
+peano_div( N1, N2, 0, N1) :-
+    menor( N1, N2).
+
+peano_div( N1, N2, s(R), Resto) :- 
+    resta( N1, N2, N12),
+    peano_div( N12, N2, R, Resto).
+
+%-------------------------------------------
+%
+% Menor
+% menor(?N1, ?N2). 
+% 
+% es cierto si N1 es menor que N2 en
+% aritmetica de peano
+%
+%-------------------------------------------
+
+menor( 0, s(_)).
+
+menor( s(N1), s(N2)) :-
+    menor( N1, N2).
