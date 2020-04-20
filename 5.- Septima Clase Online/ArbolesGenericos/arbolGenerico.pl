@@ -32,8 +32,6 @@
 
 arbol1(a(1, [a(3, []), a(4, []), a(5, [])])).
 
-arbol2(a(1), [a(2, [a(5, []), a(6, []), a(7, [])]), a(3, []), a(4, [a(8, [])])]).
-
 arbol2(
    a(1, [ a(2, [a(5, []), a(6, []), a(7, [])]), a(3, []), a(4, [a(8, [])])])
 ).
@@ -162,48 +160,26 @@ creaListaArboles([Cab|Resto], [a(Cab, []) | R]):-
 %
 % anchura(+Arbol, -Lista)
 %   es cierto si Lista unifica con una lista que contiene
-%   el recorrido en anchura del arbol A.
+%   las etiquetas del recorrido en anchura del arbol generico A.
 %
+% La idea es, la raiz la dejamos igual, cogemos el primer hijo, y su lista
+% de hijos la subimos al mismo nivel que ese primer hijo, pasamos al siguiente
+% hijo y en el momento que no tengan hijos ese primer nivel, es el recorrido 
+% en anchura
 %-------------------------------------------
 
 % Predicado para arboles
 
-anchura(a( E, _), [E]).
+anchura(a(E, L), [E|R]) :-
+    anchura(L, R).
 
-anchura(a( _, ListaHijos), R) :-
-    anchura(ListaHijos, R).
-
-% Predicado para lista de arboles
+% Predicado para lista arboles
 
 anchura( [], []).
 
-anchura( ListaArboles, R):-
-    bajarNivel(ListaArboles, R2),
-    anchura(R2, R).
+anchura( [a(E,L) | Resto], [E|R2]) :-
+    append(Resto, L, R),
+    anchura(R, R2).
 
-anchura(ListaArboles, R) :- 
-    etiquetas(ListaArboles, R).
-
-%-------------------------------------------
-%
-% bajarNivel( +ListaArboles, -ListaR)
-%
-%-------------------------------------------
-
-bajarNivel([], []).
-
-bajarNivel([a(_,L)|Resto], R2):-
-    Resto \= [];
-    bajarNivel(Resto, R),
-    append(L, R, R2).
-
-%-------------------------------------------
-%
-% etiquetas(+ListaArboles, -ListaEtiquetas)
-%
-%-------------------------------------------
-
-etiquetas( [], []).
-
-etiquetas( [a(E ,_)|Resto], [E|R]) :-
-    etiquetas(Resto, R).
+% Cuando la lista R sea muy grande para mostrarla por pantalla, y muestre
+% ..., existe el metodo write(R) y te la escribe entera.
