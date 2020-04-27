@@ -91,3 +91,33 @@ mov( pasarG5G3, estado( G5, G3), estado( R5, 3)) :-
     T is G5 + G3,
     T > 3,
     R5 is T - 3.
+
+/*
+
+
+    Decima Clase Online
+
+
+*/
+
+%-------------------------------------------
+%
+% Camino a la solucion
+%   camino(+EstadoInicial, +EstadoFinal, +Visitados, -R).
+%       es cierto si R unifica con una lista de movimientos
+%       para pasar del EstadoInicial al estadoFinal, sin repetir
+%       los estados de la lista de estados visitados.
+%
+%   Inicial -> Mov -> EstadoTMP -> Mov -> ...               Final.
+%                                        --------------------->
+%   EstadoTMP esta un paso mas cerca del final que el Inicial, construiremos
+%   la inducción desde ahi.
+%
+%-------------------------------------------
+
+camino(Ini, Ini, _, [] ).
+
+camino(Ini, Fin, Visitados, [Mov|Camino]):-
+    mov(Mov, Ini, Tmp), 
+    \+ member( Tmp, Visitados),
+    camino(Tmp, Fin, [Tmp|Visitados], Camino).
