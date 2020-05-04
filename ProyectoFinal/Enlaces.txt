@@ -1,3 +1,0 @@
-Posibles Ejercicios:
-    - https://www.metalevel.at/prolog
-    - https://www.metalevel.at/

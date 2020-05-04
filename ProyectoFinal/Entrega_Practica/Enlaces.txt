@@ -1,0 +1,11 @@
+Posibles Ejercicios:
+    - https://www.metalevel.at/prolog
+    - https://www.metalevel.at/
+
+
+Proyecto ordenar:
+    - MergeSort : https://en.wikibooks.org/wiki/Prolog/Sorting
+    - QuickSort : https://www.cp.eng.chula.ac.th/~prabhas//teaching/dsys/2004/quick-prolog.htm
+    - HeapSort : http://colin.barker.pagesperso-orange.fr/tpro1/sorts.htm
+
+    - Todos : http://colin.barker.pagesperso-orange.fr/tpro1/sorts.htm
