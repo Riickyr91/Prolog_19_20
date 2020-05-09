@@ -32,7 +32,7 @@ Se realizarán dos entregas:
 
 ### Bibliografía
 
-[1] What is Knowledge Representation in AI? Techniques You Need To Know 
+[1] What is Knowledge Representation in AI? Techniques You Need To Know ( Faltan las Redes Bayesianas )
 https://www.edureka.co/blog/knowledge-representation-in-ai/
 
 [2] Knowledge Representation in Artificial intelligence  
