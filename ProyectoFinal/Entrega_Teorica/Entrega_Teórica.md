@@ -28,28 +28,28 @@ La representación lógica es un lenguaje con algunas reglas concretas que trata
         También implica asignar un significado a cada oración.
 
 ### Ventajas
-La representación lógica nos permite hacer razonamientos lógicos	
-Es la base de los lenguajes de programación	
+La representación lógica nos permite hacer razonamientos lógicos.
+Es la base de los lenguajes de programación.
 
 ### Desventajas
-Tiene algunas restricciones y son difíciles de trabajar
-La técnica puede no ser muy natural, y la inferencia puede no ser tan eficiente
+Tiene algunas restricciones y son difíciles de trabajar.
+La técnica puede no ser muy natural, y la inferencia puede no ser tan eficiente.
 
 ## Redes Semánticas
 La técnica de Redes Semánticas Naturales se representa como grafos y consiste en solicitar a un grupo de sujetos que definan una serie de conceptos dados, empleando únicamente sustantivos, adjetivos, verbos o adverbios, evitando cualquier tipo de partícula gramatical. Posteriormente con las listas individuales de conceptos definidores obtenidas en cada grupo, es posible realizar un análisis cuantitativo que permite conocer las características de las Redes Semánticas Naturales obtenidas tanto grupal como individualmente. 
 Son alternativas de la lógica de predicados. Podemos representar nuestro conocimiento en forma de redes gráficas. Esta red consta de nodos que representan objetos y arcos que describen la relación entre esos objetos 
 
 ### Ventajas
-Son una representación natural del conocimiento	
-Transmiten significado de manera transparente	
-Son simples y fácilmente comprensibles	
+Son una representación natural del conocimiento.
+Transmiten significado de manera transparente.
+Son simples y fácilmente comprensibles.
 
 ### Desventajas
-Las redes semánticas toman más tiempo computacional en tiempo de ejecución
-Intentan modelar una memoria similar a la humana, por lo que no es posible construir una red semántica tan grande
-Este tipo de representaciones son inadecuadas ya que no tienen un cuantificador equivalente
-Las redes semánticas no tienen ninguna definición estándar para nombres de los enlaces
-No son inteligentes dependen del creador
+Las redes semánticas toman más tiempo computacional en tiempo de ejecución.
+Intentan modelar una memoria similar a la humana, por lo que no es posible construir una red semántica tan grande.
+Este tipo de representaciones son inadecuadas ya que no tienen un cuantificador equivalente.
+Las redes semánticas no tienen ninguna definición estándar para nombres de los enlaces.
+No son inteligentes dependen del creador.
 
 ## Representación de Marcos
 Se defino como Marco, una colección de atributos que define el estado de un objeto y su relación con otros marcos, es decir, con otros objetos.
@@ -60,16 +60,16 @@ Los marcos pueden ser:
 Los marcos se organizan jerárquicamente, dando lugar a un sistema de inferencia basado en herencia.
 
 ### Ventajas
-Facilita la programación al agrupar los datos relacionados
-Es flexible y utilizada por muchas aplicaciones en IA
-Es muy fácil agregar espacios para nuevos atributos y relaciones
-Es fácil incluir datos predeterminados y buscar valores perdidos
-Es fácil de entender y visualizar
+Facilita la programación al agrupar los datos relacionados.
+Es flexible y utilizada por muchas aplicaciones en IA.
+Es muy fácil agregar espacios para nuevos atributos y relaciones.
+Es fácil incluir datos predeterminados y buscar valores perdidos.
+Es fácil de entender y visualizar.
 
 ### Desventajas
-El mecanismo de inferencia no se procesa fácilmente
-El mecanismo de inferencia no puede proceder sin problemas mediante la representación de trama
-La representación de trama tiene un enfoque muy generalizado
+El mecanismo de inferencia no se procesa fácilmente.
+El mecanismo de inferencia no puede proceder sin problemas mediante la representación de trama.
+La representación de trama tiene un enfoque muy generalizado.
 
 ## Producción de Reglas
 Siguen la siguiente forma:
@@ -78,12 +78,12 @@ Dado que cada regla puede verse como una unidad dentro de una base de conocimien
 Varias reglas pueden activarse al mismo tiempo, por lo que se hacen necesarias estrategias de control para decidir qué regla disparar o en qué orden hacerlo.
 
 ### Ventajas
-Se expresan en lenguaje natural
-Son altamente modulares, por lo que podemos eliminar, agregar, o modificar fácilmente una regla individual
+Se expresan en lenguaje natural.
+Son altamente modulares, por lo que podemos eliminar, agregar, o modificar fácilmente una regla individual.
 
 ### Desventajas
-No exhibe ninguna capacidad de aprendizaje, ya que no almacena el resultado del problema para usos futuros
-Necesidad de una estrategia de control de reglas
+No exhibe ninguna capacidad de aprendizaje, ya que no almacena el resultado del problema para usos futuros.
+Necesidad de una estrategia de control de reglas.
 
 ## Redes Bayesianas
 Las redes bayesianas son sistemas expertos que representan el conocimiento incierto mediante probabilidades.
@@ -91,14 +91,14 @@ Son grafos dirigidos acíclicos cuyos nodos representan variables aleatorias en 
 Cada nodo tiene asociado una función de probabilidad que toma como entrada un conjunto particular de valores padres del nodo y devuelve la probabilidad de la variable representada en el nodo.
 
 ### Ventajas
-La posibilidad de combinar datos objetivos y subjetivos
-Pueden modelar sistemas complejos
-Puede actualizarse rápidamente o modificarse por cambios en la información
-Puede utilizarse para análisis de “Que pasa si”
+La posibilidad de combinar datos objetivos y subjetivos.
+Pueden modelar sistemas complejos.
+Puede actualizarse rápidamente o modificarse por cambios en la información.
+Puede utilizarse para análisis de “Que pasa si”.
 
 ### Desventajas
-La confiabilidad de la información a priori ( Una expectativa demasiado optimista o pesimista a priori pueden distorsionar la red )
-Pueden generarse muchos arcos “innecesarios”
+La confiabilidad de la información a priori ( Una expectativa demasiado optimista o pesimista a priori pueden distorsionar la red ).
+Pueden generarse muchos arcos “innecesarios”.
 
 ## Bibliografía
 ¿Qué es la representación del conocimiento en IA? -> Edureka.co
