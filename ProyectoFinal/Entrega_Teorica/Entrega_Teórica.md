@@ -45,7 +45,7 @@ Transmiten significado de manera transparente
 Son simples y fácilmente comprensibles	
 
 ### Desventajas
-Las redes semánticas toman más tiempo computacional en tiempo de ejecución.
+Las redes semánticas toman más tiempo computacional en tiempo de ejecución
 Intentan modelar una memoria similar a la humana, por lo que no es posible construir una red semántica tan grande
 Este tipo de representaciones son inadecuadas ya que no tienen un cuantificador equivalente
 Las redes semánticas no tienen ninguna definición estándar para nombres de los enlaces
@@ -60,7 +60,7 @@ Los marcos pueden ser:
 Los marcos se organizan jerárquicamente, dando lugar a un sistema de inferencia basado en herencia.
 
 ### Ventajas
-Facilita la programación al agrupar los datos relacionados.
+Facilita la programación al agrupar los datos relacionados
 Es flexible y utilizada por muchas aplicaciones en IA
 Es muy fácil agregar espacios para nuevos atributos y relaciones
 Es fácil incluir datos predeterminados y buscar valores perdidos
@@ -68,8 +68,8 @@ Es fácil de entender y visualizar
 
 ### Desventajas
 El mecanismo de inferencia no se procesa fácilmente
-El mecanismo de inferencia no puede proceder sin problemas mediante la representación de trama.
-La representación de trama tiene un enfoque muy generalizado.
+El mecanismo de inferencia no puede proceder sin problemas mediante la representación de trama
+La representación de trama tiene un enfoque muy generalizado
 
 ## Producción de Reglas
 Siguen la siguiente forma:
@@ -79,11 +79,11 @@ Varias reglas pueden activarse al mismo tiempo, por lo que se hacen necesarias e
 
 ### Ventajas
 Se expresan en lenguaje natural
-Son altamente modulares, por lo que podemos eliminar, agregar, o modificar fácilmente una regla individual.
+Son altamente modulares, por lo que podemos eliminar, agregar, o modificar fácilmente una regla individual
 
 ### Desventajas
 No exhibe ninguna capacidad de aprendizaje, ya que no almacena el resultado del problema para usos futuros
-Necesidad de una estrategia de control de reglas.
+Necesidad de una estrategia de control de reglas
 
 ## Redes Bayesianas
 Las redes bayesianas son sistemas expertos que representan el conocimiento incierto mediante probabilidades.
@@ -93,12 +93,12 @@ Cada nodo tiene asociado una función de probabilidad que toma como entrada un c
 ### Ventajas
 La posibilidad de combinar datos objetivos y subjetivos
 Pueden modelar sistemas complejos
-Puede actualizarse rápidamente o modificarse por cambios en la información.
-Puede utilizarse para análisis de “Que pasa si”.
+Puede actualizarse rápidamente o modificarse por cambios en la información
+Puede utilizarse para análisis de “Que pasa si”
 
 ### Desventajas
 La confiabilidad de la información a priori ( Una expectativa demasiado optimista o pesimista a priori pueden distorsionar la red )
-Pueden generarse muchos arcos “innecesarios”.
+Pueden generarse muchos arcos “innecesarios”
 
 ## Bibliografía
 ¿Qué es la representación del conocimiento en IA? -> Edureka.co
