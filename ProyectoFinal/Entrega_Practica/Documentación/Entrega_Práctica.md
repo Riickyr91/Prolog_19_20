@@ -57,9 +57,12 @@ Para el correcto funcionamiento del algoritmo, hemos tenido que utilizar las sig
 ## Bibliografía
 Hay que destacar que el código de la práctica lo hemos sacado de la siguiente URL, siendo el propietario de él Jorge Carlos Valverde Rebaza:
 -	http://jc-info.blogspot.com/2012/04/star-algorithm-prolog-code.html
+
 Definición del algoritmo de búsqueda A Estrella:
 -	https://es.wikipedia.org/wiki/Algoritmo_de_b%C3%BAsqueda_A*
+
 Explicación negación como fracaso / not:
 -	http://dit.upm.es/~gfer/ssii/rcsi/rcsisu85.html
+
 Explicación member:
 -	https://www.swi-prolog.org/pldoc/man?predicate=member/2
