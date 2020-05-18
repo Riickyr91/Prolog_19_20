@@ -236,9 +236,9 @@ removerCamino(X,[Y|T],[Y|T2]):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Imprime caminos
-%       imprimeCamino(+[ListaNodos|Coste]),
-%               Imprime caminos según su orden.
+%       imprimeCamino(+Solucion),
+%               es cierto si solución unifica con un lista de nodos, donde la última
+%               posición de la lista es la distancia a recorrer.
 %
 %-------------------------------------------------------------------------------------
 
