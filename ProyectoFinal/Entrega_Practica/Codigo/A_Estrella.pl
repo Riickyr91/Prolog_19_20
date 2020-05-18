@@ -82,8 +82,7 @@ hsld(2,13,374).
 
 %-------------------------------------------------------------------------------------
 %
-%       Obtener_Heurística
-%       obtener_hsld(Origen, Destino, Distancia),
+%       obtener_hsld(+Origen, +Destino, -Distancia),
 %               es cierto cuando existe una heurística ( distancia ) cuando cumpla
 %               con la ciudad de origen y destino
 %
@@ -98,10 +97,9 @@ obtener_hsld(Origen, Destino, Distancia):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Encontrar Camino
-%       encontrarCamino(Origen, Destino, [Camino|Coste]),
+%       encontrarCamino(+Origen, +Destino, -Solucion),
 %               es cierto cuando existe una lista de nodos que empiece en origen
-%               y termine en destino que unifique con Camino.
+%               y termine en destino.
 %
 %-------------------------------------------------------------------------------------
 
@@ -116,8 +114,7 @@ encontrarCamino(Origen, Destino, Camino):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Buscar Heuristica
-%       buscaHeuristica(Caminos, Solucion , Destino ),
+%       buscaHeuristica(+Caminos, -Solucion , +Destino ),
 %               es cierto cuando existe una lista de Transiciones que te lleva
 %               desde Camininos iniciales, hasta Destino. 
 %
@@ -137,15 +134,14 @@ buscaHeuristica(Caminos, Solucion, Destino):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Escoger proximo camino
-%       escogerProximo(Caminos, Proximo , Destino ),
-%               Obtiene todos los caminos recorridos hasta el momento 
-%               y realiza las comparaciones. 
-%               Solo se detiene cuando se encuentra el menor camino (menor Coste)
+%       escogerProximo(+Caminos, -Proximo , +Destino),
+%               es cierto cuando existe un nodo proximo que te acerca al destino
+%               a través de los caminos
 %
 %-------------------------------------------------------------------------------------
 
-escogerProximo([X],X,_):-!.
+escogerProximo([X],X,_):-
+  !.
 
 escogerProximo([[Custo1,Cidade1|Resto1],[Custo2,Cidade2|_]|Cola], MejorCamino, Destino):-
  obtener_hsld(Cidade1, Destino, Avaliacao1),
@@ -161,8 +157,7 @@ escogerProximo([[Custo1,Cidade1|_],[Custo2,Cidade2|Resto2]|Cola], MejorCamino, D
 
 %-------------------------------------------------------------------------------------
 %
-%       Extender siguiente camino
-%       extenderSiguienteCamino(Prox, NuevosCaminos),
+%       extenderSiguienteCamino(+Prox, -NuevosCaminos),
 %               Es cierto si NuevosCaminos unifica con la lista de los 
 %               caminos que parten desde Prox.
 %
@@ -174,8 +169,7 @@ extenderSiguienteCamino([Custo,No|Caminho],NuevosCaminos):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Actualizar costes caminos
-%       actualizarCostesCaminos(ListaCaminos, NuevosCaminos).
+%       actualizarCostesCaminos(+ListaCaminos, -NuevosCaminos).
 %               Actualiza el coste de los caminos y los añade en nuevos caminos.
 %
 %-------------------------------------------------------------------------------------
@@ -189,8 +183,7 @@ actualizarCostesCaminos([[Custo,NovoNo,No|Caminho]|Cola],[[NovoCusto,NovoNo,No|C
 
 %-------------------------------------------------------------------------------------
 %
-%       Verifica los movimientos
-%       verificarMovimiento(Origen, Destino, Distancia)
+%       verificarMovimiento(+Origen, +Destino, -Distancia)
 %               Es cierto cuando existe una transición desde origen a destino con una distancia
 %               o viceversa
 %
@@ -203,9 +196,8 @@ verificarMovimiento(Origen, Destino, Distancia):-
  grafo(Destino, Origen, Distancia).
 
 %-------------------------------------------------------------------------------------
-%
-%       invierte Caminos
-%       invertirCamino(Lista1 ,Lista2)
+%s
+%       invertirCamino(+Lista1 ,-Lista2)
 %               Es cierto cuando Lista2 unifica con Lista1 invertida
 %
 %-------------------------------------------------------------------------------------
@@ -218,8 +210,7 @@ invertirCamino([X|Y],Lista):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Concatena caminos
-%       concatenarCaminos(ListaInt,[Nodo],NuevaLista).
+%       concatenarCaminos(+ListaInt,+Nodo,-NuevaLista).
 %               Es cierto cuando nueva lista es la concatenación de ListaInt y el nuevo
 %               nodo Nodo
 %
@@ -232,10 +223,9 @@ concatenarCaminos([X|Y],L,[X|Lista]):-
 
 %-------------------------------------------------------------------------------------
 %
-%       Elimina caminos
-%       removerCamino(Prox, Caminos, CaminosRestantes),
-%               Elimina los caminos que no empiecen por Prox, para ir descartando
-%
+%       removerCamino(+Prox, +Caminos, -CaminosRestantes),
+%           Es cierto cuando existe una lista CaminosRestantes que unifica 
+%           con los posibles caminos válidos para llegar hasta el destino.
 %-------------------------------------------------------------------------------------
 
 removerCamino(X,[X|T],T):-!.
@@ -247,7 +237,7 @@ removerCamino(X,[Y|T],[Y|T2]):-
 %-------------------------------------------------------------------------------------
 %
 %       Imprime caminos
-%       imprimeCamino([ListaNodos|Coste]),
+%       imprimeCamino(+[ListaNodos|Coste]),
 %               Imprime caminos según su orden.
 %
 %-------------------------------------------------------------------------------------
