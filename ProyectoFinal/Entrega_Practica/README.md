@@ -104,7 +104,11 @@ Es cierto cuando existe una lista CaminosRestantes que unifica con los posibles 
 
 **ImprimerCamino**
 
-En este caso, esta función va imprimiendo todas las ciudades de izquierda a derecha de la lista, y cuando sólo queda un elemento en la lista, sabemos que es el coste y cambia el formate del write para sacar por pantalla el coste.
+En este caso, esta función cuenta con el predicado _**imprimeCamino(+Solucion)**_ y va imprimiendo todas las ciudades de izquierda a derecha de la lista, y cuando sólo queda un elemento en la lista, sabemos que es el coste y cambia el formate del write para sacar por pantalla el coste.
+
+```
+Es cierto si solución unifica con un lista de nodos, donde la última posición de la lista es la distancia a recorrer.
+```
 
 
 ## Nuevas Funciones
