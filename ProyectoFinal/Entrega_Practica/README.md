@@ -43,7 +43,7 @@ Esta función, es la más importante ya que es la que se encarga de escoger el p
 Además, se encarga de ir concatenando los caminos seleccionados.
 
 ```
-es cierto cuando existe una lista de Transiciones que te lleva desde Camininos iniciales, hasta Destino. 
+Es cierto cuando existe una lista de Transiciones que te lleva desde Camininos iniciales, hasta Destino. 
 ```
 
 **Escoger Próximo**
