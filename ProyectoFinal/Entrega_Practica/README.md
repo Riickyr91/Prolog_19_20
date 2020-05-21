@@ -29,6 +29,7 @@ A partir de aquí, vamos a explicar todas las funciones utilizadas en la impleme
 
 
 **Encontrar Camino**
+
 _**encontrarCamino(+Origen, +Destino, -Solucion)**_ , _Es cierto cuando existe una lista de nodos que empiece en origen y termine en destino._
 Este predicado sería el principal, donde Solucion es una lista de nodos por los que pasa con el coste concatenado en la última posicion de la lista. 
 
@@ -40,41 +41,51 @@ Este predicado sería el principal, donde Solucion es una lista de nodos por los
 
 ```
 
+
 **Busca Heurística**
+
  _**buscaHeuristica(+Caminos, -Solucion , +Destino )**_, _Es cierto cuando existe una lista de Transiciones que te lleva desde Camininos iniciales, hasta Destino._
 Esta función, es la más importante ya que es la que se encarga de escoger el próximo camino, eliminar ( pasar a visitados ) los nodos que ya no nos sirve. También extiende los caminos, es decir, añade a la lista de caminos los caminos nuevos que se abren al “posicionarse” en el nuevo nodo.
 Además, se encarga de ir concatenando los caminos seleccionados.
 
 
 **Escoger Próximo**
+
 _**escogerProximo(+Caminos, -Proximo , +Destino)**_, _Es cierto cuando existe existe un camino hacia el proximo en dirección al destino con el menor coste._ Obtiene todos los caminos recorridos hasta el momento y realiza las comparaciones. Solo se detiene cuando se encuentra el menor camino (menor Coste).
 
 
 **Extender Siguiente Camino**
+
 _**extenderSiguienteCamino(+Prox, -NuevosCaminos)**_, _Es cierto si NuevosCaminos unifica con la lista de los caminos que parten desde Prox._ Según el nodo Prox que tengamos, realiza las comprobaciones necesarias ( existe movimiento, no está en la lista de camino, … ) para poder añadir los siguientes caminos a la lista.
 
 
 **Actualizar Costes Caminos**
+
 _**actualizarCostesCaminos(+ListaCaminos, -NuevosCaminos)**_, _Es cierto si NuevosCaminos unifica con la lista de los caminos con los pesos actualizados._ Según la lista de caminos que llevamos, va actualizando los pesos ( distancia ) de los nuevos caminos.
 
 
 **Verifica Movimientos**
+
 _**verificarMovimiento(+Origen, +Destino, -Distancia)**_, _Es cierto cuando existe una transición desde origen a destino con una distancia o viceversa._ Revisa si el movimiento a realizar de ciudad origen a ciudad destino con la distancia expresada existe.
 
 
 **Invierte Camino**
+
 _**invertirCamino(+Lista1 ,-Lista2)**_, _Es cierto cuando Lista2 unifica con Lista1 invertida._
 
 
 **Concatena Caminos**
+
 _**concatenarCaminos(+ListaInt,+Nodo,-NuevaLista)**_, _Es cierto cuando nueva lista es la concatenación de ListaInt y el nuevo nodo Nodo._ Concatenar a una lista un nodo visitado nuevo.
 
 
 **Borra Caminos**
+
 _**removerCamino(+Prox, +Caminos, -CaminosRestantes)**_, _Es cierto cuando existe una lista CaminosRestantes que unifica con los posibles caminos válidos para llegar hasta el destino._ Este predicado, borra los caminos innecesarios que tengamos en nuestra lista de abiertos.
 
 
 **ImprimerCamino**
+
 _**imprimeCamino(+Solucion)**_, _Es cierto si solución unifica con un lista de nodos, donde la última posición de la lista es la distancia a recorrer._ Va imprimiendo todas las ciudades de izquierda a derecha de la lista, y cuando sólo queda un elemento en la lista, sabemos que es el coste y cambia el formate del write para sacar por pantalla el coste.
 
 
