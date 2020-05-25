@@ -7,6 +7,8 @@
 ## Introducción
 En esta memoria, vamos a describir el algoritmo de búsqueda A Estrella escrito en prolog y programado por _**Jorge Carlos Valverde Rebaza**_ . 
 
+  - http://jc-info.blogspot.com/2012/04/star-algorithm-prolog-code.html
+
 El Algoritmo de búsqueda A estrella, es una algoritmo para buscar el camino entre un origen y un fin gracias a una heurística ( o pista ), teniendo la peculiaridad que ese camino es el de menor coste de todos los posibles. 
 
 A continuación, expongamos el siguiente ejemplo, nos encontramos en este mapa y deseamos ir desde Mehadia a Bucharest:
@@ -18,12 +20,13 @@ A continuación, expongamos el siguiente ejemplo, nos encontramos en este mapa y
 Pues el Algoritmo de búsqueda A estrella nos deberia de dar el camino que pasa por Dobreta, Craiovam y Pitesti hasta llegar a Bucharest.
 
 A continuación mostramos el enlace del código:
--   https://github.com/Riickyr91/Representacion-del-Conocimiento-19-20/blob/master/ProyectoFinal/Entrega_Practica/Codigo/A_Estrella.pl
+  - https://github.com/Riickyr91/Representacion-del-Conocimiento-19-20/blob/master/ProyectoFinal/Entrega_Practica/Codigo/A_Estrella.pl
 
-Debemos indicar que la filosofía utilizada para explicar el código y realizar algunas modificaciones es la inducción explicada por @jcarpio.
+Debemos indicar que la filosofía utilizada para explicar el código y realizar algunas modificaciones es la inducción explicada por @jcarpio, siendo su repositorio:
+  - https://github.com/jcarpio
 
 Para visualizar tutoriales de _Prolog_ podeis visitar el canal de Youtube siguiente:
--   https://www.youtube.com/user/josecarpioc
+  - https://www.youtube.com/user/josecarpioc
 
 
 ## Descripción del Código
