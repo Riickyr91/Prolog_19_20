@@ -183,7 +183,7 @@ actualizarCostesCaminos([[Custo,NovoNo,No|Caminho]|Cola],[[NovoCusto,NovoNo,No|C
 
 %-------------------------------------------------------------------------------------
 %
-%       verificarMovimiento(+Origen, +Destino, -Distancia)
+%       verificarMovimiento(+Origen, +Destino, +Distancia)
 %               Es cierto cuando existe una transición desde origen a destino con una distancia
 %               o viceversa
 %
