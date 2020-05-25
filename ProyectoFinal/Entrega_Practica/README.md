@@ -14,7 +14,7 @@ El Algoritmo de búsqueda A estrella, es una algoritmo para buscar el camino ent
 A continuación, expongamos el siguiente ejemplo, nos encontramos en este mapa y deseamos ir desde Mehadia a Bucharest:
 
 <p align="center">
-  <img src="./EjemplosEjecución/Mapa.jpg">
+  <img src="./EjemplosEjecución/EjemploMapa.jpg">
 </p>
 
 Pues el Algoritmo de búsqueda A estrella nos deberia de dar el camino que pasa por Dobreta, Craiovam y Pitesti hasta llegar a Bucharest.
