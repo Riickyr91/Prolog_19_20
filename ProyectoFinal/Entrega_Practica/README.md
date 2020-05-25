@@ -8,7 +8,14 @@
 En esta memoria, vamos a describir el algoritmo de búsqueda A Estrella escrito en prolog y programado por _**Jorge Carlos Valverde Rebaza**_ . 
 
 El Algoritmo de búsqueda A estrella, es una algoritmo para buscar el camino entre un origen y un fin gracias a una heurística ( o pista ), teniendo la peculiaridad que ese camino es el de menor coste de todos los posibles. 
-(Ejemplo con imágenes en el PDF)
+
+A continuación, expongamos el siguiente ejemplo, nos encontramos en este mapa y deseamos ir desde Mehadia a Bucharest:
+
+<p align="center">
+  <img width="300" height="300" src="./EjemplosEjecución/Mapa.jpg">
+</p>
+
+Pues el Algoritmo de búsqueda A estrella nos deberia de dar el camino que pasa por Dobreta, Craiovam y Pitesti hasta llegar a Bucharest.
 
 A continuación mostramos el enlace del código:
 -   https://github.com/Riickyr91/Representacion-del-Conocimiento-19-20/blob/master/ProyectoFinal/Entrega_Practica/Codigo/A_Estrella.pl
@@ -40,7 +47,6 @@ Este predicado sería el principal, donde Solucion es una lista de nodos por los
         R = [7, 8, 12, 11, 13, 434] .
 
 ```
-
 
 **Busca Heurística**
 
@@ -88,12 +94,17 @@ _**removerCamino(+Prox, +Caminos, -CaminosRestantes)**_, _Es cierto cuando exist
 
 _**imprimeCamino(+Solucion)**_, _Es cierto si solución unifica con un lista de nodos, donde la última posición de la lista es la distancia a recorrer._ Va imprimiendo todas las ciudades de izquierda a derecha de la lista, y cuando sólo queda un elemento en la lista, sabemos que es el coste y cambia el formate del write para sacar por pantalla el coste.
 
-
 ## Nuevas Funciones
 Para el correcto funcionamiento del algoritmo, hemos tenido que utilizar las siguientes funciones no dadas en las clases de teoría:
 -	!: llamado negación como fracaso, es la negación de la clausula anterior a la exclamación, pero tiene la particularidad de que con este modo se libera la restricción sintáctica de que las regals tengan que ser cláusulas de Horn.
 -	not(): es la negación de lo que tenga entre parentesis.
 -	member(): es cierto si el primer elemento de la función es mienbro del segundo elemento del parámetro, utilizado para saber si un nodo o camino estaba en la lista.
+
+## Ejemplo de Ejecución
+
+<p align="center">
+  <img width="300" height="300" src="./EjemplosEjecución/Ejemplo.jpg">
+</p>
 
 ## Bibliografía
 Hay que destacar que el código de la práctica lo hemos sacado de la siguiente URL, siendo el propietario de él Jorge Carlos Valverde Rebaza:
