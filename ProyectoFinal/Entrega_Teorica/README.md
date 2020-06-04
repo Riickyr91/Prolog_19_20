@@ -30,16 +30,17 @@ Esta representación establece algunas reglas de comunicación importantes. Cons
 
 La representación lógica se puede clasificar principalmente en dos lógicas:
 
--       Lógica Proposicional:
-        Es la forma más simple de la lógica donde todas las declaraciones se hacen proposiciones. Una proposición es una declaración declarativa que es verdad o falsa.
+-	Lógica Proposicional:
+        Es la forma más simple de la lógica donde todas las declaraciones se hacen proposiciones.
+        Una proposición es una declaración declarativa que es verdad o falsa.
 
-        A continuación mostramos la tabla resumida para las conexiones lógicas proposicionales:
+A continuación mostramos la tabla resumida para las conexiones lógicas proposicionales:
 
 <p align="center">
-        <img src="./Otros/propositional-logic-in-ai.png">
+        <img src="./Otros/propositional-logic-in-ai.jpg">
 </p>
 
-        Ejemplo
+Ejemplo
 
  ```
         P: Hoy es martes
@@ -47,10 +48,14 @@ La representación lógica se puede clasificar principalmente en dos lógicas:
  ```     
 
 
--       Lógica de predicados:
-        Es un sistema formal diseñado para estudiar la inferencia en los lenguajes de primer orden, que a su vez, son lenguajes formales con cuantificadores que alcanzan solo a variables de individuo, y con predicados y funciones cuyos argumentos son solo constantes o variables de individuo. Un ejemplo de aplicación de esta lógica es el algoritmo FOL.
+-	Lógica de Predicados:
+        Es un sistema formal diseñado para estudiar la inferencia en los lenguajes de primer orden.
+        Los lenguajes de primer orden son lenguajes formales con cuantificadores que alcanzan solo a variables de individuo.
+        Tienesn predicados y funciones cuyos argumentos son solo constantes o variables de individuo. 
+        Un ejemplo de aplicación de esta lógica es el algoritmo FOL.
 
-        Ejemplo
+Ejemplo
+
 ```
         Todo hombre respeta a sus padres.
         En esta pregunta, el predicado es " respeto (x, y)", donde x = hombre ey = padre .
@@ -142,7 +147,11 @@ Cada nodo tiene asociado una función de probabilidad que toma como entrada un c
 En el siguiente ejemplo podremos ver el funcionamiento de una red bayesiana
 
 ```
-        Supongamos que hay dos eventos los cuales pueden causar que la hierba esté húmeda: que el rociador esté activado o que esté lloviendo. También supongamos que la lluvia tiene un efecto directo sobre el uso del rociador (usualmente cuando llueve el rociador se encuentra apagado). Las tres variables tienen dos posibles valores, T (para verdadero) y F (para falso).
+        Supongamos que hay dos eventos los cuales pueden causar que la hierba esté húmeda: 
+         1.- Que el rociador esté activado
+         2.- Que esté lloviendo.
+         También supongamos que la lluvia tiene un efecto directo sobre el uso del rociador (usualmente cuando llueve el rociador se encuentra apagado).
+         Las tres variables tienen dos posibles valores, T (para verdadero) y F (para falso).
 
 ```
 
