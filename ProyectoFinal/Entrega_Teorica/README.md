@@ -18,7 +18,8 @@ Formalmente la definimos como un área cuyo objetivo fundamental es representar 
 Debemos tener en cuenta que la inferencia se realiza sobre conocimiento incompleto o incierto ( aproximado o con incertidumbre).
 
 ## Representación Lógica
-La representación lógica es un lenguaje con algunas reglas concretas que trata con proposiciones y no tiene ambigüedad en la representación. Representación lógica significa sacar una conclusión basada en varias condiciones. Esta representación establece algunas reglas de comunicación importantes. Consiste en una sintaxis y una semántica definidas con precisión que admiten la inferencia de sonido. Cada oración se puede traducir a la lógica usando sintaxis y semántica.
+La representación lógica es un lenguaje con algunas reglas concretas que trata con proposiciones y no tiene ambigüedad en la representación. Representación lógica significa sacar una conclusión basada en varias condiciones.
+Esta representación establece algunas reglas de comunicación importantes. Consiste en una sintaxis y una semántica definidas con precisión que admiten la inferencia de sonido. Cada oración se puede traducir a la lógica usando sintaxis y semántica.
 -	Sintaxis:
         La sintaxis son las reglas que deciden cómo podemos construir oraciones legales en la lógica.
         Determina qué símbolo podemos usar en la representación del conocimiento.
@@ -26,6 +27,36 @@ La representación lógica es un lenguaje con algunas reglas concretas que trata
 -	Semántica:
         La semántica son reglas por las cuales podemos interpretar la oración en la lógica.
         También implica asignar un significado a cada oración.
+
+La representación lógica se puede clasificar principalmente en dos lógicas:
+
+-       Lógica Proposicional:
+        Es la forma más simple de la lógica donde todas las declaraciones se hacen proposiciones. Una proposición es una declaración declarativa que es verdad o falsa.
+
+        A continuación mostramos la tabla resumida para las conexiones lógicas proposicionales:
+
+<p align="center">
+        <img src="./Otros/propositional-logic-in-ai.png">
+</p>
+
+        Ejemplo
+
+ ```
+        P: Hoy es martes
+        ~P: Hoy no es martes
+ ```     
+
+
+-       Lógica de predicados:
+        Es un sistema formal diseñado para estudiar la inferencia en los lenguajes de primer orden, que a su vez, son lenguajes formales con cuantificadores que alcanzan solo a variables de individuo, y con predicados y funciones cuyos argumentos son solo constantes o variables de individuo. Un ejemplo de aplicación de esta lógica es el algoritmo FOL.
+
+        Ejemplo
+```
+        Todo hombre respeta a sus padres.
+        En esta pregunta, el predicado es " respeto (x, y)", donde x = hombre ey = padre .
+        Como hay todos los hombres, usará ∀, y se representará de la siguiente manera:
+              ∀x man (x) → respeta (x, padre) .
+```
 
 ### Ventajas
 La representación lógica nos permite hacer razonamientos lógicos.
@@ -38,6 +69,12 @@ La técnica puede no ser muy natural, y la inferencia puede no ser tan eficiente
 ## Redes Semánticas
 La técnica de Redes Semánticas Naturales se representa como grafos y consiste en solicitar a un grupo de sujetos que definan una serie de conceptos dados, empleando únicamente sustantivos, adjetivos, verbos o adverbios, evitando cualquier tipo de partícula gramatical. Posteriormente con las listas individuales de conceptos definidores obtenidas en cada grupo, es posible realizar un análisis cuantitativo que permite conocer las características de las Redes Semánticas Naturales obtenidas tanto grupal como individualmente. 
 Son alternativas de la lógica de predicados. Podemos representar nuestro conocimiento en forma de redes gráficas. Esta red consta de nodos que representan objetos y arcos que describen la relación entre esos objetos 
+
+A continuación mostraremos un ejemplo de una red semántica clásica:
+
+<p align="center">
+        <img src="./Otros/Ejemplo_RedSemantica.jpg">
+</p>
 
 ### Ventajas
 Son una representación natural del conocimiento.
@@ -52,12 +89,18 @@ Las redes semánticas no tienen ninguna definición estándar para nombres de lo
 No son inteligentes dependen del creador.
 
 ## Representación de Marcos
-Se defino como Marco, una colección de atributos que define el estado de un objeto y su relación con otros marcos, es decir, con otros objetos.
+Se define como Marco, una colección de atributos que define el estado de un objeto y su relación con otros marcos, es decir, con otros objetos.
 Al encontrar una situación nueva, seleccionar de memoria un marco y adaptarlo a la realidad cambiando detalles.
 Los marcos pueden ser:
 -	Clases, que representan conceptos o entidades generales.
 -	Instancias, que son ejemplos particulares de las clases.
 Los marcos se organizan jerárquicamente, dando lugar a un sistema de inferencia basado en herencia.
+
+En esta imágen mostramos un ejemplo de una representación de Marcos:
+
+<p align="center">
+        <img src="./Otros/Ejemplo_Marcos.jpg">
+</p>
 
 ### Ventajas
 Facilita la programación al agrupar los datos relacionados.
@@ -73,9 +116,15 @@ La representación de trama tiene un enfoque muy generalizado.
 
 ## Producción de Reglas
 Siguen la siguiente forma:
-si antecedente entonces consecuente
+si antecedente entonces consecuente, donde el antecedente es el conjunto de condiciones que se debe satisfacer en el dominio de aplicación para evaluar la regla y el consecuente es el conjunto de conclusiones o acciones que se derivan del antecedente.
 Dado que cada regla puede verse como una unidad dentro de una base de conocimiento, es posible incorporar nuevo conocimiento o modificar el existente creando o cambiando las reglas individualmente.
 Varias reglas pueden activarse al mismo tiempo, por lo que se hacen necesarias estrategias de control para decidir qué regla disparar o en qué orden hacerlo.
+
+Ejemplo:
+
+```
+        si temperatura=40 entonces fiebre=presente
+```
 
 ### Ventajas
 Se expresan en lenguaje natural.
@@ -89,6 +138,17 @@ Necesidad de una estrategia de control de reglas.
 Las redes bayesianas son sistemas expertos que representan el conocimiento incierto mediante probabilidades.
 Son grafos dirigidos acíclicos cuyos nodos representan variables aleatorias en el sentido de Bayes, las aristas representan dependencias condicionales.
 Cada nodo tiene asociado una función de probabilidad que toma como entrada un conjunto particular de valores padres del nodo y devuelve la probabilidad de la variable representada en el nodo.
+
+En el siguiente ejemplo podremos ver el funcionamiento de una red bayesiana
+
+```
+        Supongamos que hay dos eventos los cuales pueden causar que la hierba esté húmeda: que el rociador esté activado o que esté lloviendo. También supongamos que la lluvia tiene un efecto directo sobre el uso del rociador (usualmente cuando llueve el rociador se encuentra apagado). Las tres variables tienen dos posibles valores, T (para verdadero) y F (para falso).
+
+```
+
+<p align="center">
+        <img src="./Otros/Ejemplo_RedBayesiana.jpg">
+</p>
 
 ### Ventajas
 La posibilidad de combinar datos objetivos y subjetivos.
@@ -112,6 +172,15 @@ Representación del Conocimiento
 
 Representación del conocimiento mediante lógica formal 
 -   https://www.nebrija.es/~cmalagon/ia/transparencias/representacion_del_conocimiento_prolog.pdf 
+
+Lógica proposicional
+-   https://www.javatpoint.com/propositional-logic-in-artificial-intelligence
+
+Lógica de predicados
+-   https://es.wikipedia.org/wiki/L%C3%B3gica_de_primer_orden
+
+Ejemplo de lógica de predicados:
+-   https://www.javatpoint.com/first-order-logic-in-artificial-intelligence
 
 Técnicas de representación del conocimiento
 -   https://www.javatpoint.com/ai-techniques-of-knowledge-representation
